@@ -1,4 +1,4 @@
-Remove outermost Paranthesis
+Remove outermost Paranthesis ::
 class Solution {
 public:
     string removeOuterParentheses(string s) {
