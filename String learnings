@@ -1,4 +1,5 @@
-Remove outermost Paranthesis ::
+
+First Code --- Remove outermost Paranthesis ::
 class Solution {
 public:
     string removeOuterParentheses(string s) {
@@ -25,3 +26,27 @@ public:
 };
 Time Complexity - O(n) 
 Space Complexity = O(n) as we are using extra stack space
+2nd Code----------------------------------------
+Reverse words in a given string / Palindrome Check ::
+string reverseWords(string s) {
+        int n = s.size();
+        reverse(s.begin(),s.end());
+        string ans = "";
+        for(int i =0;i<n;i++){
+              string  word = "";
+    
+       while(i<n && s[i] != ' '){
+        word+= s[i]; 
+        i++;
+       }
+       reverse(word.begin(),word.end());
+       if(word.length() >0)
+       ans+= " " +word;
+        
+    }
+    return ans.substr(1);
+    }
+TC = O(n) 
+SC = O(n) as we use word to store the current elsment
+
+
